@@ -1,12 +1,8 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.masthead {
+  height: 1vh;
+  min-height: 500px;
+  background-image: url('https://unsplash.com/photos/vJsj-hgOEG0');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
