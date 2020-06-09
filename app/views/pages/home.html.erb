@@ -1,10 +1,34 @@
 <header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center">
-        <h1 class="font-weight-light">Commun<span>EAT</span>y</h1>
-        <p class="lead">Homemade and cheap</p>
+  <div class="container h-100 d-flex justify-content-center align-items-center">
+    <div class="font-weight-light mt-3  bg-dark logo p-4  shadow text-light text-center">
+      <h1 class="display-3">Commun<span class="bg-green mx-1 logo px-2 text-light ">EAT</span>y</h1>
+      <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <h4 class="mb-0"><i class="fas fa-chevron-down"></i></h4>
+      </a>
+      <div class="collapse" id="collapseExample">
+        <p class="m-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="d-flex align-items-center justify-content-around">
+          <%= link_to "Register", new_user_registration_path, class: "btn btn-secondary" %>
+          <%= link_to "Browse Meals!", meals_path, class: "btn btn-secondary" %>
+        </div>
       </div>
     </div>
   </div>
+  <p></p>
 </header>
+<div class="container" >
+  <div class="row align-items-center justify-content-around jumbotron text-center">
+    <div class="col-3 btn btn-light value-div">
+      <i class="fas fa-users values"></i>
+      <h5>Community Based</h5>
+    </div>
+    <div class="col-3 btn btn-light value-div">
+      <i class="fas fa-leaf values"></i>
+      <h5>Environmentally Friendly</h5>
+    </div>
+    <div class="col-3 btn btn-light value-div">
+      <i class="fas fa-utensils values"></i>
+      <h5>Good'n'Cheap</h5>
+    </div>
+  </div>
+</div>

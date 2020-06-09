@@ -4,7 +4,7 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    @meals = policy_scope(Meal)
   end
 
   # GET /meals/1
@@ -15,6 +15,7 @@ class MealsController < ApplicationController
   # GET /meals/new
   def new
     @meal = Meal.new
+    authorize @meal
   end
 
   # GET /meals/1/edit
@@ -25,6 +26,7 @@ class MealsController < ApplicationController
   # POST /meals.json
   def create
     @meal = Meal.new(meal_params)
+    authorize @meal
     @meal.user = current_user
     respond_to do |format|
       if @meal.save
@@ -53,7 +55,6 @@ class MealsController < ApplicationController
     @meal.destroy
     respond_to do |format|
       format.html { redirect_to meals_url, notice: 'Meal was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
@@ -61,6 +62,7 @@ class MealsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_meal
     @meal = Meal.find(params[:id])
+    authorize @meal
   end
 
   # Only allow a list of trusted parameters through.

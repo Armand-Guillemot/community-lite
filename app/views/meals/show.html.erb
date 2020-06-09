@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_meal_path(@meal) %> |
-<%= link_to 'Back', meals_path %>
+<p id="notice" class="alert alert-info"><%= notice %></p>
+<div class="container jumbotron mt-3 border border-secondary">
+  <div class="display-4 text-center"><%= @meal.title %></div>
+  <hr>
+  <div>
+    <%= @meal.rating %></div>
+  <%= link_to 'Edit', edit_meal_path(@meal) %> |
+  <%= link_to 'Back', meals_path %>
+  <%= link_to 'Destroy',  meal_path(@meal),  method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
